@@ -214,7 +214,16 @@ export default defineConfig({
       { text: '笔记', link: '/笔记/' },
       { text: '最近更新', link: '/toc' },
     ],
-    sidebar,
+    sidebar: generateSidebar([
+      {
+        documentRootPath: '笔记',
+        resolvePath: '/笔记/',
+      },
+      {
+        documentRootPath: '生活',
+        resolvePath: '生活',
+      },
+    ]),
   },
   markdown: {
     theme: {
